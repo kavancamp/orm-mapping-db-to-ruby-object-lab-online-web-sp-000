@@ -67,8 +67,7 @@ class Student
 
       SQL
 
-      DB[:conn].execute(sql, num)
-      end.first
+      DB[:conn].execute(sql, num).first
   end
 
   def self.first_student_in_grade_10
