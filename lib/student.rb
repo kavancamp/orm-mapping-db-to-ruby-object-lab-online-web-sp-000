@@ -65,10 +65,10 @@ end
    end.first
   end
 
-  
+
   def self.first_student_in_grade_10
     sql = <<-SQL
-    SELECT * 
+    SELECT *
     FROM students
     WHERE students.grade = 10
     LIMIT 1
@@ -91,8 +91,8 @@ def self.count_all_students_in_grade_9
 
   def self.students_below_12th_grade
       sql = <<-SQL
-      SELECT * 
-      FROM students 
+      SELECT *
+      FROM students
       WHERE students.grade < 12
       SQL
       DB[:conn].execute(sql).collect do |row|
@@ -101,7 +101,5 @@ def self.count_all_students_in_grade_9
     end
 
 
-  
-end
 
-  
+end
