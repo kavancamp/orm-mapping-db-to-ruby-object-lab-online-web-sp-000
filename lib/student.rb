@@ -62,7 +62,7 @@ class Student
     sql = <<-SQL
       SELECT * FROM students
       WHERE grade = 10
-      LIMIT size
+      LIMIT = ?
       SQL
 
       DB[:conn].execute(sql, num).map do |row|
