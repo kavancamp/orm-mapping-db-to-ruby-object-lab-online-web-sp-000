@@ -3,11 +3,18 @@ class Student
 
   def self.new_from_db(row)
     # create a new Student object given a row from the database
+    new_
   end
 
   def self.all
     # retrieve all the rows from the "Students" database
     # remember each row should be a new instance of the Student class
+    sql = <<-SQL
+    SELECT *
+    FROM songs
+    SQL
+    DB[:conn].execute(sql)
+    end
   end
 
   def self.find_by_name(name)
