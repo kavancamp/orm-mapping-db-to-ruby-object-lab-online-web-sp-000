@@ -11,7 +11,7 @@ class Student
     # remember each row should be a new instance of the Student class
     sql = <<-SQL
     SELECT *
-    FROM songs
+    FROM student
     SQL
 
     DB[:conn].execute(sql).map do |row|
