@@ -61,9 +61,9 @@ class Student
   def self.first_X_students_in_grade_10(num)
     sql = <<-SQL
         SELECT *
-        FROM songs
-        WHERE name = ?
-        LIMIT 1
+        FROM students
+        WHERE grade = 10
+        LIMIT 2
       SQL
 
       DB[:conn].execute(sql, num).map do |row|
