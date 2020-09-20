@@ -50,7 +50,7 @@ class Student
   end
 end
 
-d # find the student in the database given a name	    sql = <<-SQL
+ # find the student in the database given a name	    sql = <<-SQL
   # return a new instance of the Student class	    SELECT *
   def self.find_by_name(name)
     sql = <<-SQL
