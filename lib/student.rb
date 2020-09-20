@@ -52,7 +52,7 @@ end
 
 def self.find_by_name(name)
   # find the student in the database given a name	    sql = <<-SQL
-  # return a new instance of the Student class	    SELECT * 
+  # return a new instance of the Student class	    SELECT *
   FROM students
   WHERE name = ?
   LIMIT 1
@@ -64,8 +64,8 @@ end
 
 def self.students_below_12th_grade
   sql = <<-SQL
-  SELECT * 
-  FROM students 
+  SELECT *
+  FROM students
   WHERE students.grade < 12
   SQL
   DB[:conn].execute(sql).collect do |row|
@@ -75,7 +75,7 @@ end
 
 def self.first_student_in_grade_10
   sql = <<-SQL
-  SELECT * 
+  SELECT *
   FROM students
   WHERE students.grade = 10
   LIMIT 1
@@ -83,7 +83,7 @@ def self.first_student_in_grade_10
   DB[:conn].execute(sql).collect do |row|
     self.new_from_db(row)
   end.first
-end	  
+end
 
 
   def self.count_all_students_in_grade_9
